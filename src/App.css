@@ -9,27 +9,3 @@
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
 }
-
-.header {
-  grid-area: header;
-  background-color: rgb(102, 255, 153);
-}
-
-.header img {
-  width: 100px;
-  height: 50px;
-}
-
-.nav {
-  grid-area: nav;
-  background-color: rgb(102, 255, 153);
-}
-
-.content {
-  grid-area: content;
-  background-color: rgb(255, 204, 255);
-}
-
-.content img {
-  width: 100%;
-}
