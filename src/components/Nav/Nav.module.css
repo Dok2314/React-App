@@ -13,6 +13,10 @@
     text-decoration: none;
 }
 
-.item.active a{
+.item a.activeLink {
     color: rgb(51, 51, 0);
 }
+
+/*.active{*/
+/*    color: rgb(51, 51, 0);*/
+/*}*/
