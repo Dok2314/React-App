@@ -1,22 +1,23 @@
 import navCss from './Nav.module.css';
+import {NavLink} from "react-router-dom";
 
 const Nav = () => {
     return (
         <nav className={navCss.nav}>
-            <div className={`${navCss.item} ${navCss.active}`}>
-                <a href="/profile">Profile</a>
+            <div className={navCss.item}>
+                <NavLink to="/profile" className={navData => navData.isActive ? navCss.activeLink : navCss.item}>Profile</NavLink>
             </div>
             <div className={navCss.item}>
-                <a href="/dialogs">Messages</a>
+                <NavLink to="/dialogs" className={navData => navData.isActive ? navCss.activeLink : navCss.item}>Messages</NavLink>
             </div>
             <div className={navCss.item}>
-                <a href="/news">News</a>
+                <NavLink to="/news" className={navData => navData.isActive ? navCss.activeLink : navCss.item}>News</NavLink>
             </div>
             <div className={navCss.item}>
-                <a href="/music">Music</a>
+                <NavLink to="/music" className={navData => navData.isActive ? navCss.activeLink : navCss.item}>Music</NavLink>
             </div>
             <div className={navCss.item}>
-                <a href="/settings">Settings</a>
+                <NavLink to="/settings" className={navData => navData.isActive ? navCss.activeLink : navCss.item}>Settings</NavLink>
             </div>
         </nav>
     );
