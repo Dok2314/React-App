@@ -12,7 +12,7 @@ const MyPosts = () => {
     ];
 
     let postElements = posts
-        .map(p => <Post message={p.post} likes={p.likes} />);
+        .map(p => <Post message={p.post} likes={p.likes} key={p.id} />);
 
     return (
         <div className={myPostsCss.postsBlock}>
