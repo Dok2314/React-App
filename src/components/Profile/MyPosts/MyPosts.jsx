@@ -2,20 +2,29 @@ import myPostsCss from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = () => {
+    let posts = [
+        {id: 1, post: 'It\'s my first post!', likes: 5},
+        {id: 2, post: 'My name is Daniil!', likes: 15},
+        {id: 3, post: 'How are you dude?', likes: 23},
+        {id: 4, post: 'Do you like an apple?', likes: 4},
+        {id: 5, post: 'Weather is good!', likes: 11},
+        {id: 6, post: 'Today i\'ll tell about ReactJS!', likes: 53},
+    ];
+
+    let postElements = posts
+        .map(p => <Post message={p.post} likes={p.likes} />);
+
     return (
-        <div>
+        <div className={myPostsCss.postsBlock}>
             My posts
             <div>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <div>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
                 <button>Add post</button>
             </div>
             <div className={myPostsCss.posts}>
-                <Post message={'It\'s my first post!'} likes={5} />
-                <Post message={'My name is Daniil!'} likes={15} />
-                <Post message={'How are you dude?'} likes={23} />
-                <Post message={'Do you like an apple?'} likes={4} />
-                <Post message={'Weather is good!'} likes={11} />
-                <Post message={'Today i\'ll tell about ReactJS!'} likes={53} />
+                { postElements }
             </div>
         </div>
     );
